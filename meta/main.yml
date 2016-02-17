@@ -9,6 +9,9 @@ galaxy_info:
     - name: Debian
       versions:
         - all
+    - name: Darwin
+      versions:
+        - all
 
   galaxy_tags:
     - vim
