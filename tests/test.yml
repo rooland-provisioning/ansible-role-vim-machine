@@ -1,4 +1,4 @@
 ---
 - hosts: computors
   roles:
-    - vim-machine
+    - ansible-role-vim-machine
