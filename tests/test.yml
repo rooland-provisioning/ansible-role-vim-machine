@@ -1,0 +1,4 @@
+---
+- hosts: computors
+  roles:
+    - ../../vim-machine

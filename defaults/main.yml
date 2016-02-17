@@ -1,0 +1,2 @@
+---
+vim-machine-local_history_path: "{{ansible_env['HOME']}}/.vim/localhistory"

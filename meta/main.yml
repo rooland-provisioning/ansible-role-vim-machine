@@ -1,0 +1,16 @@
+---
+galaxy_info:
+  author: Mailo Svetel
+  description: This role installs and configures Vim
+  company: Rooland
+  license: GPLv2
+  min_ansible_version: 2.0
+  platforms:
+    - name: Debian
+      versions:
+        - all
+
+  galaxy_tags:
+    - vim
+    - texteditor
+  dependencies: []

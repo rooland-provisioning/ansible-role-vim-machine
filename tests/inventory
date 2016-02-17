@@ -1,0 +1,2 @@
+[computors]
+localhost ansible_sudo_pass='foobar' ansible_connection=local

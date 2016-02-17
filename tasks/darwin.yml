@@ -1,0 +1,13 @@
+---
+- name: Install ViM
+  homebrew: name=vim state=present
+
+- name: Install MacVim
+  homebrew_cask: name=macvim state=present
+
+- name: Install The Silver Searcher
+  homebrew_cask: name=the_silver_searcher state=present
+
+- name: Install Powerline font
+  get_url:  url=http://github.com/Lokaltog/powerline-fonts/blob/master/InconsolataDz/Inconsolata-dz%20for%20Powerline.otf?raw=true
+            dest=~/Library/Fonts

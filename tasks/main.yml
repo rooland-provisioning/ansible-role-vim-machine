@@ -1,0 +1,31 @@
+---
+- include: "{{ansible_os_family | lower}}.yml"
+
+- name: Download Vundle
+  git:  repo=https://github.com/gmarik/vundle.git
+        dest=~/.vim/bundle/vundle
+
+- name: Copy configs
+  copy: src=config
+        dest=~/.vim
+
+- name: Copy vimrc
+  copy: src=vimrc
+        dest=~/.vimrc
+        force=yes
+
+- name:       Create file for local only configs
+  lineinfile: dest="~/.vim/localconfig.vim"
+              state=present
+              create=yes
+              line="\" Intented for local only configurations"
+
+- name:     Vundle it
+  command:  vim +BundleInstall +qall
+
+- name: Create dir for local history
+  file: dest={{vim-machine-local_history_path}}
+        state=directory
+
+- name:   Create repo for local history
+  shell:  git init chdir={{vim-machine-local_history_path}} creates={{vim-machine-local_history_path}}/.git
