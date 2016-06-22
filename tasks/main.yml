@@ -24,8 +24,12 @@
   command:  vim +BundleInstall +qall
 
 - name: Create dir for local history
-  file: dest={{vim-machine-local_history_path}}
-        state=directory
+  file:
+    dest:   "{{ vim_machine_local_history_path }}"
+    state:  directory
 
 - name:   Create repo for local history
-  shell:  git init chdir={{vim-machine-local_history_path}} creates={{vim-machine-local_history_path}}/.git
+  shell:  git init
+  args:
+    chdir:    "{{ vim_machine_local_history_path }}"
+    creates:  "{{ vim_machine_local_history_path }}/.git"
