@@ -15,10 +15,11 @@
         force=yes
 
 - name:       Create file for local only configs
-  lineinfile: dest="~/.vim/localconfig.vim"
-              state=present
-              create=yes
-              line="\" Intented for local only configurations"
+  lineinfile:
+    create: yes
+    dest:   "~/.vim/localconfig.vim"
+    line:   "\" Intented for local only configurations"
+    state:  present
 
 - name:     Vundle it
   command:  vim +BundleInstall +qall
