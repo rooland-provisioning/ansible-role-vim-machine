@@ -1,26 +1,26 @@
-vim-machine
-=========
+# vim-machine
 
 This role installs and configures Vim.
 
-Requirements
-------------
+## Requirements
 
 This role depends on package manager. For Linux it is [APT](https://wiki.debian.org/Apt) and for OS X it's [Homebrew](http://brew.sh).
 
-Example Playbook
-----------------
 
+~~~yaml
+    ---
     - hosts: stage
       roles:
-        - vim-machine
+        - role: rooland-provisioning.atom-editor
+          tags:
+            - atom
+            - editor
+~~~
 
-License
--------
+## License
 
 BSD
 
-Author Information
-------------------
+## Author Information
 
 I am usually idling on Freenode as lipoqil
