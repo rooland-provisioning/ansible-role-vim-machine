@@ -1,13 +1,14 @@
 ---
 - name: Install ViM
   homebrew:
-    name:   vim 
+    name:   vim
     state:  present
 
 - name: Install MacVim
   homebrew_cask:
     name:   macvim
     state:  present
+  ignore_errors: yes
 
 - name: Install The Silver Searcher
   homebrew:
