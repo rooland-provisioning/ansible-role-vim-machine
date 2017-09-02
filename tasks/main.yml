@@ -26,11 +26,11 @@
 
 - name: Create dir for local history
   file:
-    dest:   "{{ vim_machine_local_history_path }}"
+    dest:   "{{ vim_machine.local_history_path }}"
     state:  directory
 
 - name:   Create repo for local history
   shell:  git init
   args:
-    chdir:    "{{ vim_machine_local_history_path }}"
-    creates:  "{{ vim_machine_local_history_path }}/.git"
+    chdir:    "{{ vim_machine.local_history_path }}"
+    creates:  "{{ vim_machine.local_history_path }}/.git"
