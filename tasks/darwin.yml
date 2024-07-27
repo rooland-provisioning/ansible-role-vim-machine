@@ -1,11 +1,5 @@
 ---
 
-
-- name: Install The Silver Searcher
-  homebrew:
-    name:   the_silver_searcher
-    state:  present
-
 - name: Install Powerline font
   get_url:
     url:  http://github.com/Lokaltog/powerline-fonts/blob/master/InconsolataDz/Inconsolata-dz%20for%20Powerline.otf?raw=true
