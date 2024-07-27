@@ -1,4 +1,8 @@
 ---
+- name:     Install gViM
+  package:
+    name:   gvim
+    state:  present
   become: yes
   tags:
     - sudoed
