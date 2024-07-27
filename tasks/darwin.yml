@@ -1,6 +1,2 @@
 ---
 
-- name: Install Powerline font
-  get_url:
-    url:  http://github.com/Lokaltog/powerline-fonts/blob/master/InconsolataDz/Inconsolata-dz%20for%20Powerline.otf?raw=true
-    dest: ~/Library/Fonts
