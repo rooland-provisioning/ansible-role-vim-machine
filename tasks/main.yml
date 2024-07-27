@@ -1,5 +1,4 @@
 ---
-- include: "{{ansible_os_family | lower}}.yml"
 - name:     Install ViM
   package:
     name:   vim
@@ -7,6 +6,8 @@
   become: "{{ansible_system == 'Linux'}}"
   tags:
     - sudoed
+
+- include_tasks: "{{ansible_os_family | lower}}.yml"
 
 - name: Download Vundle
   git:  repo=https://github.com/gmarik/vundle.git
